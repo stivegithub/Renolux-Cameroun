@@ -27,7 +27,9 @@ const Navbar: FunctionComponent<NavbarProps> = ({ images }) => {
                 <img src={images} alt="" width="70px" height="30px" />
               </div>
               <div className="flex items-center">
-               <div className=' animate-bounce'><Link to='/RendezVous'>Prendre rendez vous</Link></div>
+               <div className=' animate-bounce'><Link to='/RendezVous'>  <button className="bg-green-500 hover:bg-green-600 text-white  rounded">
+      Prendre rendez-vous
+    </button></Link></div>
               </div>
             </div>
           ) : (
