@@ -1,9 +1,11 @@
 import React from 'react';
 import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaWhatsapp, FaInstagram } from 'react-icons/fa';
+import img2 from '../../src/images/loic.jpg';
 
 const Localisation: React.FC = () => {
   return (
-    <div className="bg-white p-8 rounded shadow-md">
+<>
+<div className="bg-white p-8 rounded shadow-md">
       <h2 className="text-2xl font-bold mb-6">Notre Localisation</h2>
 
       <div className="flex items-center mb-4">
@@ -43,6 +45,8 @@ const Localisation: React.FC = () => {
         </a>
       </div>
     </div>
+    <div> <img src={img2} alt="loic" /></div>
+</>
   );
 };
 
