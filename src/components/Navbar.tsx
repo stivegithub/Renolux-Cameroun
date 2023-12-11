@@ -2,6 +2,7 @@ import React, { FunctionComponent, useState, useEffect } from 'react';
 import { AccountCircleRounded } from '@mui/icons-material';
 import { useWith } from '../tools/dimension';
 import { Link } from 'react-router-dom';
+import Accueil from './Accueil';
 
 type NavbarProps = {
   images: any;
@@ -71,11 +72,8 @@ const Navbar: FunctionComponent<NavbarProps> = ({ images }) => {
           </div>
         )}
       </div>
-      <div className="text-2xl text-justify  px-3 bg-white text-blue-500 mt-16 py-3 pt-5">
-  <span className=' text-black'>Design</span> moderne, <span className=' text-black'>finition</span> innovante <span className=' text-black'>c'est</span> {' '}
-  <span className="text-black cursor-pointer text-2xl font-bold border-b-2 border-gray-600 bg-gray-100 hover:bg-gray-200 rounded-sm px-2 py-1 transition duration-300">
-    Renolux Cameroun
-  </span>
+      <div className=" mt-16 py-3 pt-5">
+ <Accueil/>
 </div>
 
     </>
