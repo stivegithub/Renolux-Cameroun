@@ -35,19 +35,19 @@ const TravauxStats: React.FC = () => {
 
 
 
-  <div className="bg-white flex flex-wrap justify-around items-center mt-16 p-8">
-    <h2 className="text-4xl font-bold mb-8">Statistiques</h2>
+  <div className="bg-white flex flex-wrap justify-around items-center pb-8">
+    <h2 className="text-4xl font-bold">Statistiques</h2>
     {stats.map((stat, index) => (
       <motion.div
         key={index}
         initial={{ opacity: 1, y: 50 }}
         animate={isVisible ? { opacity: 0, y: 0 } : {}}
         transition={{ delay: index * 0.2, duration: 0.5 }}
-        className="text-center p-4 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-md bg-blue-100 hover:bg-blue-200 transition duration-300 m-4"
+        className="text-center p-2 sm:p-6 md:p-8 lg:p-10 xl:p-12 rounded-lg shadow-md bg-blue-100 hover:bg-blue-200 transition duration-300 m-4"
       >
         <div className="text-3xl font-bold text-blue-500">{stat.value}</div>
         <div className="text-sm text-gray-700">{stat.label}</div>
-        <FontAwesomeIcon icon={stat.icon} className="text-4xl mt-4 text-blue-500" />
+        <FontAwesomeIcon icon={stat.icon} className="text-4xl mt-1 text-blue-500" />
       </motion.div>
     ))}
   </div>
