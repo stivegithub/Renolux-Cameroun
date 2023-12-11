@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import Service from '../components/Service';
-import img2 from '../../src/images/renol.png';
+import img2 from '../../src/images/reno.png';
 import TravauxStats from '../components/TravauxStats';
 import Footer from '../components/Footer';
 import Localisation from '../components/Localisation';

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 
 const Accueil: React.FC = () => {
   return (
-    <div className="bg-black text-white h-screen flex flex-col justify-center items-center">
+    <div className="bg-black text-white h-screen flex flex-col  items-center">
       <motion.h1
         initial={{ opacity: 0, y: -50 }}
         animate={{ opacity: 1, y: 0 }}

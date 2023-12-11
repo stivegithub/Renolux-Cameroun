@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useState, useEffect } from 'react';
+import React, { FunctionComponent } from 'react';
 import { AccountCircleRounded } from '@mui/icons-material';
 import { useWith } from '../tools/dimension';
 import { Link } from 'react-router-dom';
@@ -9,19 +9,12 @@ type NavbarProps = {
 };
 
 const Navbar: FunctionComponent<NavbarProps> = ({ images }) => {
-  const [isSidebarOpen, setSidebarOpen] = useState(false);
   const width = useWith();
 
 
 
-  useEffect(() => {
-    // Fermer le sidebar lorsqu'on passe d'un grand écran à un petit écran
-    if (width > 768) {
-      setSidebarOpen(false);
-    }
-  }, [width]);
 
-  const navItems = ['Accueil', 'A propos', 'Divertissement', 'Contact'];
+
 
   return (
     <>
@@ -43,16 +36,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ images }) => {
               <div className="flex items-center">
                 <img src={images} alt="" width="70px" height="30px" />
               </div>
-              <div className="flex gap-4">
-                {navItems.map((item) => (
-                  <div
-                    key={item}
-                    className="cursor-pointer hover:text-blue-300 hover:bg-gray-700 p-2 rounded-lg hover:border-blue-400 hover:border-b-2"
-                  >
-                    {item}
-                  </div>
-                ))}
-              </div>
+              
               <div className="text-white">
                 <AccountCircleRounded className="text-7xl" />
               </div>
@@ -60,17 +44,7 @@ const Navbar: FunctionComponent<NavbarProps> = ({ images }) => {
           )}
         </div>
         {/* Sidebar pour les petits écrans */}
-        {width <= 768 && isSidebarOpen && (
-          <div className="bg-gray-900 p-4">
-            <div className="flex flex-col gap-4">
-              {navItems.map((item) => (
-                <div key={item} className="cursor-pointer hover:text-blue-300 hover:bg-gray-700">
-                  {item}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
+       
       </div>
       <div className=" mt-16 py-3 pt-5">
  <Accueil/>
