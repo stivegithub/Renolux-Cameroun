@@ -3,7 +3,6 @@ import Navbar from '../components/Navbar';
 import Carousel from '../components/Carousel';
 import Service from '../components/Service';
 import img2 from '../../src/images/renol.png';
-import Contact from '../components/Contact';
 import TravauxStats from '../components/TravauxStats';
 import Footer from '../components/Footer';
 import Localisation from '../components/Localisation';
