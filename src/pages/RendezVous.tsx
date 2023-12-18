@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { FaCalendarAlt, FaClock, FaUser, FaEnvelope } from 'react-icons/fa';
+import { Client, ClientOptions } from 'whatsapp-web.js';
 
 interface FormData {
   date: string;
@@ -25,25 +26,30 @@ const RendezVous: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('tout va bien')
+    console.log('tout va bien');
 
     try {
-      const response = await fetch('http://localhost:2003/rendez-vous', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // Supposons que le numéro de téléphone soit le suivant
+      const phoneNumber = '658182157';
+      const message = `Nouveau rendez-vous!\nDate: ${formData.date}\nHeure: ${formData.heure}\nNom: ${formData.prenom}\nTravaux: ${formData.travaux}\nEmail: ${formData.email}`;
 
-      if (response.ok) {
-        console.log('Formulaire soumis avec succès');
-        // Ajoutez ici le code pour traiter la réponse du serveur si nécessaire
-      } else {
-        console.error('Erreur lors de la soumission du formulaire');
-      }
+      // Créez un objet ClientOptions
+      const clientOptions: ClientOptions = {
+        session: undefined, // Peut être défini si vous souhaitez maintenir une session persistante
+      };
+
+      // Créez un client WhatsApp avec les options
+      const client = new Client(clientOptions);
+
+      // Attendez que le client se connecte
+      await client.initialize();
+
+      // Envoyez le message WhatsApp
+      await client.sendMessage(`${phoneNumber}@c.us`, message);
+
+      console.log('Message envoyé avec succès sur WhatsApp');
     } catch (error) {
-      console.error('Une erreur s\'est produite:', error);
+      console.error('Une erreur s\'est produite lors de l\'envoi du message WhatsApp:', error);
     }
   };
 
@@ -143,9 +149,7 @@ const RendezVous: React.FC = () => {
             </button>
           </div>
         </form>
-      </div>
-   
-    </>
+      </div>    </>
   );
 };
 
