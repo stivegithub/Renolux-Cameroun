@@ -29,7 +29,7 @@ const RendezVous: React.FC = () => {
     console.log('tout va bien');
 
     try {
-      // Supposons que le numéro de téléphone soit le suivant
+      // Supposons que le numéro de téléphone soit le suivant  691098037
       const phoneNumber = '658182157';
       const message = `Nouveau rendez-vous!\nDate: ${formData.date}\nHeure: ${formData.heure}\nNom: ${formData.prenom}\nTravaux: ${formData.travaux}\nEmail: ${formData.email}`;
 
