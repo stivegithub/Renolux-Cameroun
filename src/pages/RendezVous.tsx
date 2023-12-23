@@ -1,6 +1,6 @@
 // RendezVous.tsx
 import React, { useState } from 'react';
-import { FaCalendarAlt, FaClock, FaUser } from 'react-icons/fa';
+import { FaCalendarAlt, FaClock, FaUser, FaTools } from 'react-icons/fa';
 import ButtonWhatsapp from '../components/ButtonWhatsapp'
 
 interface FormData {
@@ -82,8 +82,8 @@ const RendezVous: React.FC = () => {
           </div>
 
           <div className="flex flex-col mb-4">
-            <label htmlFor="travaux" className="text-lg mb-2">
-              Travaux à réaliser
+          <label htmlFor="travaux" className="text-lg mb-2">
+              <FaTools className="mr-2 inline" /> Travaux à réaliser
             </label>
             <select
               id="travaux"
