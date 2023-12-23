@@ -35,7 +35,7 @@ const TravauxStats: React.FC = () => {
 
 
 
-  <div className="bg-white flex flex-wrap justify-around items-center pb-8">
+  <div className="bg-white flex flex-wrap justify-around items-center pb-8 ">
     <h2 className="text-4xl font-bold">Statistiques</h2>
     {stats.map((stat, index) => (
       <motion.div
