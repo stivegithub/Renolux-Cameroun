@@ -106,10 +106,11 @@ const RendezVous: React.FC = () => {
             type="submit"
             className=" py-2 px-4 rounded transition duration-300"
           >
-          <ButtonWhatsapp  phoneNumber="691098037" message={`
+          <ButtonWhatsapp  phoneNumber="+237 691098037" message={`
 L'équipe Renolux Cameroun, nous souhaitons avoir  un rendez avec Vous.
 
 Détails de la réservation :
+- Nom : ${formData.nom}
 - Date du rendez-vous : ${formData.date}
 - Heure du rendez-vous : ${formData.heure}
 - Travaux demandés : ${formData.travaux}
